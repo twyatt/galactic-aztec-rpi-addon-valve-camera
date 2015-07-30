@@ -4,7 +4,7 @@
 
 Custom Raspberry Pi Add-on board used for launching the [Galactic Aztec] rocket. The board was designed to be stackable with other add-on boards via the designated [pin configuration].
 
-The Camera Control ethernet port was designed to activate [HackHD] cameras via the [Galactic Aztec Camera Control] (rev1) board and can be configured to activate multiple [HackHD]s using the [Galactic Aztec Camera Control Splitter] board.
+The Camera Control ethernet port was designed to activate [HackHD] cameras via the [Galactic Aztec Camera Control] (rev2 or newer) board and can be configured to activate multiple [HackHD]s using the [Galactic Aztec Camera Control Splitter] board.
 
 The Valve Feedback ethernet port was designed to read valve actuation status (open or close) by means of reading Reed switches (for the Main, LOX and Kerosene valves) via the [Galactic Aztec Reed Switch Interface] and [Galactic Aztec Reed Switch Splitter] boards.
 
