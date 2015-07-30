@@ -50,6 +50,8 @@
 <layer number="54" name="bGND_GNDA" color="1" fill="9" visible="no" active="no"/>
 <layer number="56" name="wert" color="7" fill="1" visible="no" active="no"/>
 <layer number="57" name="tCAD" color="7" fill="1" visible="no" active="no"/>
+<layer number="59" name="tCarbon" color="7" fill="1" visible="no" active="no"/>
+<layer number="60" name="bCarbon" color="7" fill="1" visible="no" active="no"/>
 <layer number="90" name="Modules" color="5" fill="1" visible="yes" active="yes"/>
 <layer number="91" name="Nets" color="2" fill="1" visible="yes" active="yes"/>
 <layer number="92" name="Busses" color="1" fill="1" visible="yes" active="yes"/>
@@ -83,6 +85,7 @@
 <layer number="126" name="_bNames" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="127" name="_tValues" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="128" name="_bValues" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="129" name="Mask" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="131" name="tAdjust" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="132" name="bAdjust" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="144" name="Drill_legend" color="7" fill="1" visible="yes" active="yes"/>
@@ -130,6 +133,7 @@
 <layer number="250" name="Descript" color="3" fill="1" visible="no" active="no"/>
 <layer number="251" name="SMDround" color="12" fill="11" visible="no" active="no"/>
 <layer number="254" name="cooling" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="255" name="routoute" color="7" fill="1" visible="yes" active="yes"/>
 </layers>
 <schematic xreflabel="%F%N/%S.%C%R" xrefpart="/%S.%C%R">
 <libraries>
@@ -2179,7 +2183,7 @@ Simple RJ45, 8-pin connection - connector for common Cat5, Cat5e, and Cat6 Ether
 </device>
 </devices>
 </deviceset>
-<deviceset name="M02" prefix="JP">
+<deviceset name="M02" prefix="JP" uservalue="yes">
 <description>Standard 2-pin 0.1" header. Use with &lt;br&gt;
 - straight break away headers ( PRT-00116)&lt;br&gt;
 - right angle break away headers (PRT-00553)&lt;br&gt;
@@ -3685,75 +3689,6 @@ You are welcome to use this library for commercial purposes. For attribution, we
 </deviceset>
 </devicesets>
 </library>
-<library name="SDSURocket-BreakoutBoards">
-<packages>
-<package name="5566-4">
-<description>&lt;b&gt;Mini FIT Right Angle Connector 4 Pol&lt;/b&gt;&lt;p&gt;
-Source: http://www.molex.com</description>
-<wire x1="-4.7" y1="-3.95" x2="4.7" y2="-3.95" width="0.254" layer="51"/>
-<wire x1="4.7" y1="-16.65" x2="2.1" y2="-16.65" width="0.254" layer="51"/>
-<wire x1="2.1" y1="-16.65" x2="-2.1" y2="-16.65" width="0.254" layer="51"/>
-<wire x1="-2.1" y1="-16.65" x2="-4.7" y2="-16.65" width="0.254" layer="51"/>
-<wire x1="-4.7" y1="-16.65" x2="-4.7" y2="-3.95" width="0.254" layer="51"/>
-<wire x1="-0.9" y1="-11.45" x2="-0.9" y2="-8.65" width="0.254" layer="21" curve="-114.529547"/>
-<wire x1="0.9" y1="-11.45" x2="0.9" y2="-8.65" width="0.254" layer="21" curve="114.529547"/>
-<pad name="1" x="2.1" y="-2.75" drill="1.4" shape="square"/>
-<pad name="2" x="-2.1" y="-2.75" drill="1.4" shape="square"/>
-<pad name="4" x="-2.1" y="2.75" drill="1.4" shape="square"/>
-<pad name="3" x="2.1" y="2.75" drill="1.4" shape="square"/>
-<text x="-5" y="-16" size="1.27" layer="25" rot="R90">&gt;NAME</text>
-<text x="5" y="-16" size="1.27" layer="27" rot="R90" align="top-left">&gt;VALUE</text>
-<hole x="0" y="-10.05" drill="3"/>
-<wire x1="4.7" y1="-16.65" x2="4.7" y2="-3.95" width="0.254" layer="51"/>
-<wire x1="-2.1" y1="-16.65" x2="-2.1" y2="-15.05" width="0.127" layer="51"/>
-<wire x1="-2.1" y1="-15.05" x2="2.1" y2="-15.05" width="0.127" layer="51"/>
-<wire x1="2.1" y1="-15.05" x2="2.1" y2="-16.65" width="0.127" layer="51"/>
-</package>
-</packages>
-<symbols>
-<symbol name="MV">
-<wire x1="1.27" y1="0" x2="0" y2="0" width="0.6096" layer="94"/>
-<text x="2.54" y="-0.762" size="1.524" layer="95">&gt;NAME</text>
-<text x="-0.762" y="1.397" size="1.778" layer="96">&gt;VALUE</text>
-<pin name="S" x="-2.54" y="0" visible="off" length="short" direction="pas"/>
-</symbol>
-<symbol name="M">
-<wire x1="1.27" y1="0" x2="0" y2="0" width="0.6096" layer="94"/>
-<text x="2.54" y="-0.762" size="1.524" layer="95">&gt;NAME</text>
-<pin name="S" x="-2.54" y="0" visible="off" length="short" direction="pas"/>
-</symbol>
-</symbols>
-<devicesets>
-<deviceset name="5566-4" prefix="X">
-<description>&lt;b&gt;Mini FIT connector 4 pol&lt;/b&gt;&lt;p&gt;
-Source: http://www.molex.com</description>
-<gates>
-<gate name="-1" symbol="MV" x="0" y="5.08" addlevel="always"/>
-<gate name="-2" symbol="M" x="0" y="2.54" addlevel="always"/>
-<gate name="-3" symbol="M" x="0" y="0" addlevel="always"/>
-<gate name="-4" symbol="M" x="0" y="-2.54" addlevel="always"/>
-</gates>
-<devices>
-<device name="-RIGHTANGLE" package="5566-4">
-<connects>
-<connect gate="-1" pin="S" pad="1"/>
-<connect gate="-2" pin="S" pad="2"/>
-<connect gate="-3" pin="S" pad="3"/>
-<connect gate="-4" pin="S" pad="4"/>
-</connects>
-<technologies>
-<technology name="">
-<attribute name="MF" value="" constant="no"/>
-<attribute name="MPN" value="" constant="no"/>
-<attribute name="OC_FARNELL" value="unknown" constant="no"/>
-<attribute name="OC_NEWARK" value="unknown" constant="no"/>
-</technology>
-</technologies>
-</device>
-</devices>
-</deviceset>
-</devicesets>
-</library>
 <library name="SparkFun-LED">
 <description>&lt;h3&gt;SparkFun Electronics' preferred foot prints&lt;/h3&gt;
 In this library you'll find discrete LEDs for illumination or indication, but no displays.&lt;br&gt;&lt;br&gt;
@@ -4470,6 +4405,77 @@ Basic schematic elements and footprints for 0603, 1206, and PTH resistors.</desc
 </deviceset>
 </devicesets>
 </library>
+<library name="SDSURocket-Connectors">
+<packages>
+<package name="5566-4">
+<description>&lt;b&gt;Mini FIT Right Angle Connector 4 Pol&lt;/b&gt;&lt;p&gt;
+Source: http://www.molex.com</description>
+<wire x1="4.7" y1="-16.65" x2="2.1" y2="-16.65" width="0.254" layer="51"/>
+<wire x1="2.1" y1="-16.65" x2="-2.1" y2="-16.65" width="0.254" layer="51"/>
+<wire x1="-2.1" y1="-16.65" x2="-4.7" y2="-16.65" width="0.254" layer="51"/>
+<wire x1="-4.7" y1="-16.65" x2="-4.7" y2="-3.95" width="0.254" layer="51"/>
+<wire x1="-0.9" y1="-11.45" x2="-0.9" y2="-8.65" width="0.254" layer="21" curve="-114.529547"/>
+<wire x1="0.9" y1="-11.45" x2="0.9" y2="-8.65" width="0.254" layer="21" curve="114.529547"/>
+<pad name="1" x="2.1" y="-2.75" drill="1.8" shape="square"/>
+<pad name="2" x="-2.1" y="-2.75" drill="1.8" shape="square"/>
+<pad name="4" x="-2.1" y="2.75" drill="1.8" shape="square"/>
+<pad name="3" x="2.1" y="2.75" drill="1.8" shape="square"/>
+<text x="-5" y="-16" size="1.27" layer="25" font="vector" rot="R90">&gt;Name</text>
+<text x="5" y="-16" size="1.27" layer="27" font="vector" rot="R90" align="top-left">&gt;Value</text>
+<hole x="0" y="-10.05" drill="3"/>
+<wire x1="4.7" y1="-16.65" x2="4.7" y2="-3.95" width="0.254" layer="51"/>
+<wire x1="-2.1" y1="-16.65" x2="-2.1" y2="-15.05" width="0.127" layer="51"/>
+<wire x1="-2.1" y1="-15.05" x2="2.1" y2="-15.05" width="0.127" layer="51"/>
+<wire x1="2.1" y1="-15.05" x2="2.1" y2="-16.65" width="0.127" layer="51"/>
+<wire x1="-4.7" y1="-3.95" x2="-3.7" y2="-3.95" width="0.254" layer="21"/>
+<wire x1="3.7" y1="-3.95" x2="4.7" y2="-3.95" width="0.254" layer="21"/>
+<wire x1="-0.5" y1="-3.95" x2="0.5" y2="-3.95" width="0.254" layer="21"/>
+</package>
+</packages>
+<symbols>
+<symbol name="MV">
+<wire x1="1.27" y1="0" x2="0" y2="0" width="0.6096" layer="94"/>
+<text x="2.54" y="-0.762" size="1.524" layer="95">&gt;NAME</text>
+<text x="-0.762" y="1.397" size="1.778" layer="96">&gt;VALUE</text>
+<pin name="S" x="-2.54" y="0" visible="off" length="short" direction="pas"/>
+</symbol>
+<symbol name="M">
+<wire x1="1.27" y1="0" x2="0" y2="0" width="0.6096" layer="94"/>
+<text x="2.54" y="-0.762" size="1.524" layer="95">&gt;NAME</text>
+<pin name="S" x="-2.54" y="0" visible="off" length="short" direction="pas"/>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="5566-4" prefix="X">
+<description>&lt;b&gt;Mini FIT connector 4 pol&lt;/b&gt;&lt;p&gt;
+Source: http://www.molex.com</description>
+<gates>
+<gate name="-1" symbol="MV" x="0" y="5.08" addlevel="always"/>
+<gate name="-2" symbol="M" x="0" y="2.54" addlevel="always"/>
+<gate name="-3" symbol="M" x="0" y="0" addlevel="always"/>
+<gate name="-4" symbol="M" x="0" y="-2.54" addlevel="always"/>
+</gates>
+<devices>
+<device name="-RIGHTANGLE" package="5566-4">
+<connects>
+<connect gate="-1" pin="S" pad="1"/>
+<connect gate="-2" pin="S" pad="2"/>
+<connect gate="-3" pin="S" pad="3"/>
+<connect gate="-4" pin="S" pad="4"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="MF" value="" constant="no"/>
+<attribute name="MPN" value="" constant="no"/>
+<attribute name="OC_FARNELL" value="unknown" constant="no"/>
+<attribute name="OC_NEWARK" value="unknown" constant="no"/>
+</technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
 </libraries>
 <attributes>
 </attributes>
@@ -4499,27 +4505,27 @@ Basic schematic elements and footprints for 0603, 1206, and PTH resistors.</desc
 <part name="RJ45-2" library="SparkFun-Connectors" deviceset="RJ45-8" device="PTH" value="RJ45"/>
 <part name="SUPPLY1" library="SparkFun-Aesthetics" deviceset="3.3V" device=""/>
 <part name="SUPPLY2" library="SparkFun-Aesthetics" deviceset="5V" device=""/>
-<part name="X3" library="SDSURocket-BreakoutBoards" deviceset="5566-4" device="-RIGHTANGLE"/>
 <part name="D4" library="SparkFun-LED" deviceset="LED" device="0603" value="RED"/>
 <part name="D5" library="SparkFun-LED" deviceset="LED" device="0603" value="RED"/>
 <part name="R4" library="SparkFun-Resistors" deviceset="RESISTOR" device="2512" value="1.2k 1W"/>
 <part name="R5" library="SparkFun-Resistors" deviceset="RESISTOR" device="0603-RES" value="1.8k 1/8W"/>
 <part name="GND3" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
 <part name="SUPPLY4" library="SparkFun-Aesthetics" deviceset="5V" device=""/>
-<part name="JP2" library="SparkFun-Connectors" deviceset="M02" device="-JST-2MM-SMT"/>
-<part name="JP3" library="SparkFun-Connectors" deviceset="M02" device="-JST-2MM-SMT"/>
 <part name="R3" library="SparkFun-Passives" deviceset="RESISTOR" device="0603-RES" value="1k 1/4W"/>
 <part name="Q1" library="SparkFun-DiscreteSemi" deviceset="TRANSISTOR_NPN" device="SOT23-3"/>
 <part name="RELAY3" library="SparkFun-Electromechanical" deviceset="RELAY" device="PTH" value="CAMERA CONTROL"/>
 <part name="GND5" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
 <part name="D3" library="SparkFun-DiscreteSemi" deviceset="DIODE" device="SOD123"/>
+<part name="X2" library="SDSURocket-Connectors" deviceset="5566-4" device="-RIGHTANGLE"/>
+<part name="JP4" library="SparkFun-Connectors" deviceset="M02" device="-JST-2-PTH-NO_SILK"/>
+<part name="JP1" library="SparkFun-Connectors" deviceset="M02" device="-JST-2-PTH-NO_SILK"/>
 </parts>
 <sheets>
 <sheet>
 <plain>
 <text x="172.72" y="96.52" size="2.54" layer="97" align="bottom-center">CAMERA CONTROL</text>
 <text x="198.12" y="40.64" size="2.54" layer="97" align="bottom-center">POWER</text>
-<text x="241.3" y="7.62" size="2.54" layer="94">1</text>
+<text x="241.3" y="7.62" size="2.54" layer="94">3</text>
 <text x="172.72" y="12.7" size="2.54" layer="94" align="center-left">David Wrenn &amp; Travis Wyatt</text>
 <text x="172.72" y="8.89" size="2.54" layer="94" align="center-left">SDSU Rocket Project</text>
 <text x="220.98" y="73.66" size="1.27" layer="97" align="top-center">24V Power Indicator</text>
@@ -4575,18 +4581,12 @@ Basic schematic elements and footprints for 0603, 1206, and PTH resistors.</desc
 <instance part="RJ45-2" gate="JP1" x="228.6" y="124.46"/>
 <instance part="SUPPLY1" gate="G$1" x="76.2" y="81.28"/>
 <instance part="SUPPLY2" gate="G$1" x="63.5" y="81.28"/>
-<instance part="X3" gate="-1" x="177.8" y="66.04" rot="MR0"/>
-<instance part="X3" gate="-2" x="177.8" y="63.5" rot="MR0"/>
-<instance part="X3" gate="-3" x="177.8" y="60.96" rot="MR0"/>
-<instance part="X3" gate="-4" x="177.8" y="58.42" rot="MR0"/>
 <instance part="D4" gate="G$1" x="213.36" y="78.74" rot="R90"/>
 <instance part="D5" gate="G$1" x="213.36" y="55.88" rot="R90"/>
 <instance part="R4" gate="G$1" x="226.06" y="78.74"/>
 <instance part="R5" gate="G$1" x="226.06" y="55.88"/>
 <instance part="GND3" gate="1" x="238.76" y="50.8"/>
 <instance part="SUPPLY4" gate="G$1" x="208.28" y="58.42"/>
-<instance part="JP2" gate="G$1" x="27.94" y="119.38"/>
-<instance part="JP3" gate="G$1" x="101.6" y="119.38"/>
 <instance part="R3" gate="G$1" x="172.72" y="157.48"/>
 <instance part="Q1" gate="G$1" x="182.88" y="157.48"/>
 <instance part="RELAY3" gate="G$1" x="200.66" y="170.18"/>
@@ -4595,6 +4595,12 @@ Basic schematic elements and footprints for 0603, 1206, and PTH resistors.</desc
 <attribute name="NAME" x="184.15" y="170.9674" size="1.778" layer="95" rot="R180"/>
 <attribute name="VALUE" x="187.7314" y="172.72" size="1.778" layer="96" rot="R90"/>
 </instance>
+<instance part="X2" gate="-1" x="180.34" y="71.12" rot="MR0"/>
+<instance part="X2" gate="-2" x="180.34" y="68.58" rot="MR0"/>
+<instance part="X2" gate="-3" x="180.34" y="66.04" rot="MR0"/>
+<instance part="X2" gate="-4" x="180.34" y="63.5" rot="MR0"/>
+<instance part="JP4" gate="G$1" x="101.6" y="121.92" rot="MR180"/>
+<instance part="JP1" gate="G$1" x="30.48" y="121.92" rot="MR180"/>
 </instances>
 <busses>
 </busses>
@@ -4738,19 +4744,19 @@ Basic schematic elements and footprints for 0603, 1206, and PTH resistors.</desc
 <label x="134.62" y="162.56" size="1.27" layer="95" xref="yes"/>
 </segment>
 <segment>
-<pinref part="X3" gate="-3" pin="S"/>
-<wire x1="180.34" y1="60.96" x2="182.88" y2="60.96" width="0.1524" layer="91"/>
-<pinref part="X3" gate="-4" pin="S"/>
-<wire x1="182.88" y1="60.96" x2="185.42" y2="60.96" width="0.1524" layer="91"/>
-<wire x1="180.34" y1="58.42" x2="182.88" y2="58.42" width="0.1524" layer="91"/>
-<wire x1="182.88" y1="58.42" x2="182.88" y2="60.96" width="0.1524" layer="91"/>
-<junction x="182.88" y="60.96"/>
-<label x="185.42" y="60.96" size="1.27" layer="95" xref="yes"/>
-</segment>
-<segment>
 <pinref part="D4" gate="G$1" pin="A"/>
 <wire x1="210.82" y1="78.74" x2="208.28" y2="78.74" width="0.1524" layer="91"/>
 <label x="208.28" y="78.74" size="1.27" layer="95" rot="MR0" xref="yes"/>
+</segment>
+<segment>
+<pinref part="X2" gate="-3" pin="S"/>
+<wire x1="182.88" y1="66.04" x2="185.42" y2="66.04" width="0.1524" layer="91"/>
+<pinref part="X2" gate="-4" pin="S"/>
+<wire x1="185.42" y1="66.04" x2="187.96" y2="66.04" width="0.1524" layer="91"/>
+<wire x1="182.88" y1="63.5" x2="185.42" y2="63.5" width="0.1524" layer="91"/>
+<wire x1="185.42" y1="63.5" x2="185.42" y2="66.04" width="0.1524" layer="91"/>
+<junction x="185.42" y="66.04"/>
+<label x="187.96" y="66.04" size="1.27" layer="95" xref="yes"/>
 </segment>
 </net>
 <net name="NO1" class="0">
@@ -4760,9 +4766,9 @@ Basic schematic elements and footprints for 0603, 1206, and PTH resistors.</desc
 <label x="60.96" y="157.48" size="1.27" layer="95" xref="yes"/>
 </segment>
 <segment>
-<pinref part="JP2" gate="G$1" pin="1"/>
-<wire x1="35.56" y1="119.38" x2="38.1" y2="119.38" width="0.1524" layer="91"/>
-<label x="38.1" y="119.38" size="1.27" layer="95" xref="yes"/>
+<pinref part="JP1" gate="G$1" pin="2"/>
+<wire x1="38.1" y1="119.38" x2="43.18" y2="119.38" width="0.1524" layer="91"/>
+<label x="43.18" y="119.38" size="1.27" layer="95" xref="yes"/>
 </segment>
 </net>
 <net name="N$3" class="0">
@@ -4820,7 +4826,7 @@ Basic schematic elements and footprints for 0603, 1206, and PTH resistors.</desc
 <label x="134.62" y="157.48" size="1.27" layer="95" xref="yes"/>
 </segment>
 <segment>
-<pinref part="JP3" gate="G$1" pin="1"/>
+<pinref part="JP4" gate="G$1" pin="2"/>
 <wire x1="109.22" y1="119.38" x2="114.3" y2="119.38" width="0.1524" layer="91"/>
 <label x="114.3" y="119.38" size="1.27" layer="95" xref="yes"/>
 </segment>
@@ -4836,32 +4842,42 @@ Basic schematic elements and footprints for 0603, 1206, and PTH resistors.</desc
 <wire x1="78.74" y1="78.74" x2="76.2" y2="78.74" width="0.1524" layer="91" style="longdash"/>
 <junction x="76.2" y="78.74"/>
 </segment>
+<segment>
+<pinref part="RJ45-2" gate="JP1" pin="4"/>
+<wire x1="220.98" y1="124.46" x2="218.44" y2="124.46" width="0.1524" layer="91"/>
+<label x="215.9" y="124.46" size="1.27" layer="95" rot="MR0" xref="yes"/>
+<pinref part="RJ45-2" gate="JP1" pin="5"/>
+<wire x1="218.44" y1="124.46" x2="215.9" y2="124.46" width="0.1524" layer="91"/>
+<wire x1="220.98" y1="121.92" x2="218.44" y2="121.92" width="0.1524" layer="91"/>
+<wire x1="218.44" y1="121.92" x2="218.44" y2="124.46" width="0.1524" layer="91"/>
+<junction x="218.44" y="124.46"/>
+</segment>
 </net>
 <net name="GND2" class="0">
-<segment>
-<pinref part="X3" gate="-1" pin="S"/>
-<wire x1="180.34" y1="66.04" x2="182.88" y2="66.04" width="0.1524" layer="91"/>
-<pinref part="X3" gate="-2" pin="S"/>
-<wire x1="182.88" y1="66.04" x2="185.42" y2="66.04" width="0.1524" layer="91"/>
-<wire x1="180.34" y1="63.5" x2="182.88" y2="63.5" width="0.1524" layer="91"/>
-<wire x1="182.88" y1="63.5" x2="182.88" y2="66.04" width="0.1524" layer="91"/>
-<junction x="182.88" y="66.04"/>
-<label x="185.42" y="66.04" size="1.27" layer="95" xref="yes"/>
-</segment>
 <segment>
 <pinref part="R4" gate="G$1" pin="2"/>
 <wire x1="231.14" y1="78.74" x2="233.68" y2="78.74" width="0.1524" layer="91"/>
 <label x="233.68" y="78.74" size="1.27" layer="95" xref="yes"/>
 </segment>
 <segment>
-<pinref part="JP2" gate="G$1" pin="2"/>
-<wire x1="35.56" y1="121.92" x2="38.1" y2="121.92" width="0.1524" layer="91"/>
-<label x="38.1" y="121.92" size="1.27" layer="95" xref="yes"/>
+<pinref part="X2" gate="-1" pin="S"/>
+<wire x1="182.88" y1="71.12" x2="185.42" y2="71.12" width="0.1524" layer="91"/>
+<pinref part="X2" gate="-2" pin="S"/>
+<wire x1="185.42" y1="71.12" x2="187.96" y2="71.12" width="0.1524" layer="91"/>
+<wire x1="182.88" y1="68.58" x2="185.42" y2="68.58" width="0.1524" layer="91"/>
+<wire x1="185.42" y1="68.58" x2="185.42" y2="71.12" width="0.1524" layer="91"/>
+<junction x="185.42" y="71.12"/>
+<label x="187.96" y="71.12" size="1.27" layer="95" xref="yes"/>
 </segment>
 <segment>
-<pinref part="JP3" gate="G$1" pin="2"/>
+<pinref part="JP4" gate="G$1" pin="1"/>
 <wire x1="109.22" y1="121.92" x2="114.3" y2="121.92" width="0.1524" layer="91"/>
 <label x="114.3" y="121.92" size="1.27" layer="95" xref="yes"/>
+</segment>
+<segment>
+<pinref part="JP1" gate="G$1" pin="1"/>
+<wire x1="38.1" y1="121.92" x2="43.18" y2="121.92" width="0.1524" layer="91"/>
+<label x="43.18" y="121.92" size="1.27" layer="95" xref="yes"/>
 </segment>
 </net>
 <net name="N$1" class="0">
@@ -4876,18 +4892,6 @@ Basic schematic elements and footprints for 0603, 1206, and PTH resistors.</desc
 <pinref part="D5" gate="G$1" pin="C"/>
 <pinref part="R5" gate="G$1" pin="1"/>
 <wire x1="218.44" y1="55.88" x2="220.98" y2="55.88" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="3V3" class="0">
-<segment>
-<pinref part="RJ45-2" gate="JP1" pin="4"/>
-<wire x1="220.98" y1="124.46" x2="215.9" y2="124.46" width="0.1524" layer="91"/>
-<label x="215.9" y="124.46" size="1.27" layer="95" rot="MR0" xref="yes"/>
-</segment>
-<segment>
-<pinref part="RJ45-2" gate="JP1" pin="5"/>
-<wire x1="220.98" y1="121.92" x2="215.9" y2="121.92" width="0.1524" layer="91"/>
-<label x="215.9" y="121.92" size="1.27" layer="95" rot="MR0" xref="yes"/>
 </segment>
 </net>
 <net name="WIPI23" class="0">
